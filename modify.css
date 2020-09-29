@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ubuntu;
+}
+
+.app {
+  height: 100vh;
+  background-color: #fff;
+}
+
+.body {
+  width: 100vw;
+  background-color: #fff;
+  overflow: hidden;
+  transition: background-color 0.1s;
+}
+
+
+.names i {
+  font-size: 150%;
+  margin-top: 10px;
+}
+
+label,
+.toggle {
+  height: 2.8rem;
+  border-radius: 100px;
+}
+
+label {
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  position: relative;
+  margin: 1.8rem 20px 4rem 0;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+}
+
+.toggle {
+  position: absolute;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.names {
+  font-size: 90%;
+  font-weight: bolder;
+  width: 65%;
+  margin-left: 17.5%;
+  margin-top: 0.5%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.dark {
+  opacity: 0.9;
+  color: #a3dafb;
+}
+
+.light {
+  color: #ffc300;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 30px;
+}
+
+#start {
+  background: #fff;
+  width: 100hv;
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+.sub {
+  background: linear-gradient(to right, #ff0080 0%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1em;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.glitch {
+  position: relative;
+  color: #000;
+  font-size: 4em;
+  letter-spacing: 0.5em;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(46px, 9999px, 59px, 0);
+    transform: skew(0.78deg);
+  }
+  5% {
+    clip: rect(96px, 9999px, 80px, 0);
+    transform: skew(0.97deg);
+  }
+  10% {
+    clip: rect(26px, 9999px, 62px, 0);
+    transform: skew(0.8deg);
+  }
+  15% {
+    clip: rect(24px, 9999px, 15px, 0);
+    transform: skew(0.46deg);
+  }
+  20% {
+    clip: rect(24px, 9999px, 21px, 0);
+    transform: skew(0.86deg);
+  }
+  25% {
+    clip: rect(43px, 9999px, 27px, 0);
+    transform: skew(0.43deg);
+  }
+  30% {
+    clip: rect(13px, 9999px, 7px, 0);
+    transform: skew(0.41deg);
+  }
+  35% {
+    clip: rect(80px, 9999px, 60px, 0);
+    transform: skew(0.21deg);
+  }
+  40% {
+    clip: rect(1px, 9999px, 51px, 0);
+    transform: skew(0.46deg);
+  }
+  45% {
+    clip: rect(37px, 9999px, 69px, 0);
+    transform: skew(0.02deg);
+  }
+  50% {
+    clip: rect(24px, 9999px, 8px, 0);
+    transform: skew(0.28deg);
+  }
+  55% {
+    clip: rect(61px, 9999px, 20px, 0);
+    transform: skew(0.27deg);
+  }
+  60% {
+    clip: rect(81px, 9999px, 91px, 0);
+    transform: skew(0.28deg);
+  }
+  65% {
+    clip: rect(89px, 9999px, 31px, 0);
+    transform: skew(0.7deg);
+  }
+  70% {
+    clip: rect(93px, 9999px, 68px, 0);
+    transform: skew(0.61deg);
+  }
+  75% {
+    clip: rect(18px, 9999px, 48px, 0);
+    transform: skew(0.73deg);
+  }
+  80% {
+    clip: rect(97px, 9999px, 11px, 0);
+    transform: skew(0.28deg);
+  }
+  85% {
+    clip: rect(1px, 9999px, 69px, 0);
+    transform: skew(0.8deg);
+  }
+  90% {
+    clip: rect(53px, 9999px, 93px, 0);
+    transform: skew(0.67deg);
+  }
+  95% {
+    clip: rect(7px, 9999px, 60px, 0);
+    transform: skew(0.48deg);
+  }
+  100% {
+    clip: rect(71px, 9999px, 71px, 0);
+    transform: skew(0.43deg);
+  }
+}
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(6px, 9999px, 37px, 0);
+    transform: skew(0.56deg);
+  }
+  5% {
+    clip: rect(9px, 9999px, 67px, 0);
+    transform: skew(0.62deg);
+  }
+  10% {
+    clip: rect(10px, 9999px, 56px, 0);
+    transform: skew(0.74deg);
+  }
+  15% {
+    clip: rect(66px, 9999px, 60px, 0);
+    transform: skew(0.74deg);
+  }
+  20% {
+    clip: rect(37px, 9999px, 59px, 0);
+    transform: skew(0.8deg);
+  }
+  25% {
+    clip: rect(30px, 9999px, 82px, 0);
+    transform: skew(0.07deg);
+  }
+  30% {
+    clip: rect(69px, 9999px, 54px, 0);
+    transform: skew(0.81deg);
+  }
+  35% {
+    clip: rect(70px, 9999px, 83px, 0);
+    transform: skew(0.09deg);
+  }
+  40% {
+    clip: rect(63px, 9999px, 39px, 0);
+    transform: skew(0.59deg);
+  }
+  45% {
+    clip: rect(61px, 9999px, 5px, 0);
+    transform: skew(0.81deg);
+  }
+  50% {
+    clip: rect(11px, 9999px, 60px, 0);
+    transform: skew(0.03deg);
+  }
+  55% {
+    clip: rect(23px, 9999px, 76px, 0);
+    transform: skew(0.03deg);
+  }
+  60% {
+    clip: rect(41px, 9999px, 32px, 0);
+    transform: skew(0.26deg);
+  }
+  65% {
+    clip: rect(22px, 9999px, 55px, 0);
+    transform: skew(0.93deg);
+  }
+  70% {
+    clip: rect(8px, 9999px, 48px, 0);
+    transform: skew(0.65deg);
+  }
+  75% {
+    clip: rect(14px, 9999px, 99px, 0);
+    transform: skew(0.15deg);
+  }
+  80% {
+    clip: rect(72px, 9999px, 22px, 0);
+    transform: skew(0.5deg);
+  }
+  85% {
+    clip: rect(63px, 9999px, 46px, 0);
+    transform: skew(0.66deg);
+  }
+  90% {
+    clip: rect(47px, 9999px, 9px, 0);
+    transform: skew(0.38deg);
+  }
+  95% {
+    clip: rect(18px, 9999px, 44px, 0);
+    transform: skew(0.81deg);
+  }
+  100% {
+    clip: rect(55px, 9999px, 53px, 0);
+    transform: skew(0.49deg);
+  }
+}
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  10% {
+    transform: skew(5deg);
+  }
+  20% {
+    transform: skew(2deg);
+  }
+  30% {
+    transform: skew(1deg);
+  }
+  40% {
+    transform: skew(5deg);
+  }
+  50% {
+    transform: skew(-3deg);
+  }
+  60% {
+    transform: skew(4deg);
+  }
+  70% {
+    transform: skew(4deg);
+  }
+  80% {
+    transform: skew(-4deg);
+  }
+  90% {
+    transform: skew(4deg);
+  }
+  100% {
+    transform: skew(-3deg);
+  }
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+}
+.links .block{
+  position: relative;
+  background: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-content:center;
+  align-items:center;
+  z-index: 1;
+  width:60px;
+  height: 60px;
+  transition:0.4s;
+  padding: 4px
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.links .block2{
+  position: relative;
+  background: inherit;
+  width:20px;
+  height: 20px;
+  padding: 4px
+}
+.links .block:hover{
+  background:  #26242E;
+}
+.links .block .content{
+  text-align: center;
+}
+
+.links .block:hover .content i{
+  color: white;
+}
+
+.links .block .content i{
+  color: #26242E;
+  font-size: 200%;
+}
+
+
+
+[type="checkbox"] {
+  display: none;
+}
+
+/* Toggle */
+[type="checkbox"]:checked + .app .toggle {
+  transform: translateX(100%);
+  background-color: #34323d;
+}
+
+[type="checkbox"]:checked + .app .dark {
+  opacity: 1;
+}
+
+[type="checkbox"]:checked + .app .light {
+  opacity: 0.5;
+}
+
+/* App */
+[type="checkbox"]:checked + .app .body {
+  background-color: #26242e;
+  color: white;
+}
+
+
+[type="checkbox"]:checked + .app {
+  background-color: #26242e;
+}
+
+[type="checkbox"]:checked + .app #start {
+  background-color: #26242e;
+}
+
+[type="checkbox"]:checked + .app .sub {
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[type="checkbox"]:checked + .app h1 {
+  color: #faf6c5;
+}
+
+[type="checkbox"]:checked + .app .links .block .content i{
+  color: #faf6c5;
+}
+
+[type="checkbox"]:checked + .app .links .block:hover .content i{
+  color: #26242E;
+}
+[type="checkbox"]:checked + .app .links .block:hover{
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #faf6c5,
+    inset -20px 0 80px #faf6c5,
+    inset 20px 0 300px #faf6c5,
+    inset -20px 0 300px #faf6c5,
+    0 0 50px #faf6c5,
+    -10px 0 80px #faf6c5,
+    10px 0 80px #faf6c5;
+}

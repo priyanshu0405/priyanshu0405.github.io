@@ -453,3 +453,6 @@ h1 {
     -10px 0 80px #faf6c5,
     10px 0 80px #faf6c5;
 }
+[type="checkbox"]:checked + .app .links {
+  background-color: #26242E;
+}
